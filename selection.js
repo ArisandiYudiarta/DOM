@@ -67,12 +67,12 @@
 // }
 
 // //=======================================================================
-// HOW TO CHANGE NODE ROOT
+// // HOW TO CHANGE NODE ROOT
 // const sectionB = document.getElementById('b');
 // const p4 = sectionB.querySelector('p');
 // p4.style.backgroundColor = 'purple';
 
-//OR u can do this
-const sectionB = document.querySelector('section#b');
-const p4 = sectionB.getElementsByTagName('p')[0];
-p4.style.backgroundColor = 'purple';
+// //OR u can do this
+// const sectionB = document.querySelector('section#b');
+// const p4 = sectionB.getElementsByTagName('p')[0];
+// p4.style.backgroundColor = 'purple';
