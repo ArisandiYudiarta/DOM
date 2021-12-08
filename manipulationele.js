@@ -1,3 +1,5 @@
+//MANIPULASI ELEMEN
+
 // 1 - getelementbyid
 
 // const judul = document.getElementById('judul');
@@ -32,7 +34,7 @@
 
 //5 - memanipulasi class
 
-// const p2 = document.querySelector('.p2');
+const p2 = document.querySelector('.p2');
 
 // // menambah kelas
 // p2.classList.add('label');
@@ -42,6 +44,7 @@
 
 // // toggle class(cek apakah elemen sudah punya class tersebut, jika punya maka hapus. Jika tidak, maka tambah kelas tersebut);
 // // script ini nanti bisa disimpan dalam sebuah tombol (y kno wat dat means)
+
 // p2.classList.toggle('label');
 
 // mengetahui nama kelas pada sebuah element
