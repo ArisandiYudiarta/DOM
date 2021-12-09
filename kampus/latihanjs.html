@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan JS</title>
+  <style>
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+  </style>
+</head>
+<body>
+  <h1>Latihan JavaScript</h1>
+  
+
+  <div><input id="idR" type="range" oninput="chBgColor(this)" value="255" max="255"> <span>255</span> R</div>
+  <div><input id="idG" type="range" oninput="chBgColor(this)" value="255" max="255"> <span>255</span> G</div>
+  <div><input id="idB" type="range" oninput="chBgColor(this)" value="255" max="255"> <span>255</span> B</div>
+  
+  <hr>
+  <input oninput="salam(this, 'Siang')" type="text" placeholder="Tuliskan nama anda" autofocus>
+  <p id="output"></p>
+  <script>
+    function chBgColor(el) {
+      var vR = document.getElementById('idR').value;
+      var vG = document.getElementById('idG').value;
+      var vB = document.getElementById('idB').value;
+      var val = el.value;
+
+      el.nextElementSibling.innerHTML = val;
+      document.body.style.backgroundColor = 'rgb('+vR+','+vG+','+vB+')';
+    }
+
+    function salam(el, waktu) {
+      var nama = el.value;
+      var ePar = document.getElementById('output');
+
+      if(nama.trim()=='') {
+        ePar.innerHTML = '';
+      } else {
+        ePar.innerHTML = 'Selamat ' + waktu + ', ' + nama;
+      }
+
+      // console.log(el);
+    }
+  </script>
+</body>
+</html>
