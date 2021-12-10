@@ -13,19 +13,19 @@
   <h1>Latihan JavaScript</h1>
   
 
-  <div><input id="idR" type="range" oninput="chBgColor(this)" value="255" max="255"> <span>255</span> R</div>
-  <div><input id="idG" type="range" oninput="chBgColor(this)" value="255" max="255"> <span>255</span> G</div>
-  <div><input id="idB" type="range" oninput="chBgColor(this)" value="255" max="255"> <span>255</span> B</div>
+  <div><input id="idR" type="range" oninput="chBgColor(this)" value="255"  max="255"> <span>255</span> R</div>
+  <div><input id="idG" type="range" oninput="chBgColor(this)" value="255"  max="255"> <span>255</span> G</div>
+  <div><input id="idB" type="range" oninput="chBgColor(this)" value="255"  max="255"> <span>255</span> B</div>
   
   <hr>
   <input oninput="salam(this, 'Siang')" type="text" placeholder="Tuliskan nama anda" autofocus>
   <p id="output"></p>
   <script>
-    function chBgColor(el) {
+    function chBgColor(input) {
       var vR = document.getElementById('idR').value;
       var vG = document.getElementById('idG').value;
       var vB = document.getElementById('idB').value;
-      var val = el.value;
+      var input = el.value;
 
       el.nextElementSibling.innerHTML = val;
       document.body.style.backgroundColor = 'rgb('+vR+','+vG+','+vB+')';
