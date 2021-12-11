@@ -13,39 +13,56 @@ function result(user,comp){
     if(user == 'kertas') return (comp == 'batu') ? 'MENANG!' : 'KALAH!';
 }
 
+//NEW GUD CODE
 
-const batu = document.querySelector('.batu');
-const gunting = document.querySelector('.gunting');
-const kertas = document.querySelector('.kertas');
-const showResult = document.querySelector('.info');
-const compResult = document.querySelector('.optcom');
-
-
-
-batu.addEventListener('click', function(){
-    const compOption = getCompResult();
-    const userOption = batu.className;
-    const hasil = result(userOption, compOption);
-    
-    compResult.innerHTML ='<h1>'+ compOption +'</h1>';
-    showResult.innerHTML ='<h3>'+ hasil +'</h3>';
+const options = document.querySelectorAll('div.player div');
+options.forEach(function(o){
+    o.addEventListener('click', function(){
+        const compOption = getCompResult();
+        const compResult = document.querySelector('.optcom');
+        const showResult = document.querySelector('.info');
+        const userOption = o.className;
+        const hasil = result(userOption, compOption);
+        
+        compResult.innerHTML ='<h1>'+ compOption +'</h1>';
+        showResult.innerHTML ='<h3>'+ hasil +'</h3>';
+    });
 });
 
-gunting.addEventListener('click', function(){
-    const compOption = getCompResult();
-    const userOption = gunting.className;
-    const hasil = result(userOption, compOption);
-    
-    compResult.innerHTML ='<h1>'+ compOption +'</h1>';
-    showResult.innerHTML ='<h3>'+ hasil +'</h3>';
-});
+//OLD MESSY ASS CODE
 
-kertas.addEventListener('click', function(){
-    const compOption = getCompResult();
-    const userOption = kertas.className;
-    const hasil = result(userOption, compOption);
+// const batu = document.querySelector('.batu');
+// const gunting = document.querySelector('.gunting');
+// const kertas = document.querySelector('.kertas');
+// const showResult = document.querySelector('.info');
+// const compResult = document.querySelector('.optcom');
+
+
+
+// batu.addEventListener('click', function(){
+//     const compOption = getCompResult();
+//     const userOption = batu.className;
+//     const hasil = result(userOption, compOption);
     
-    compResult.innerHTML ='<h1>'+ compOption +'</h1>';
-    showResult.innerHTML ='<h3>'+ hasil +'</h3>';
-});
+//     compResult.innerHTML ='<h1>'+ compOption +'</h1>';
+//     showResult.innerHTML ='<h3>'+ hasil +'</h3>';
+// });
+
+// gunting.addEventListener('click', function(){
+//     const compOption = getCompResult();
+//     const userOption = gunting.className;
+//     const hasil = result(userOption, compOption);
+    
+//     compResult.innerHTML ='<h1>'+ compOption +'</h1>';
+//     showResult.innerHTML ='<h3>'+ hasil +'</h3>';
+// });
+
+// kertas.addEventListener('click', function(){
+//     const compOption = getCompResult();
+//     const userOption = kertas.className;
+//     const hasil = result(userOption, compOption);
+    
+//     compResult.innerHTML ='<h1>'+ compOption +'</h1>';
+//     showResult.innerHTML ='<h3>'+ hasil +'</h3>';
+// });
 
