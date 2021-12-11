@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        } 
+
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+
+        body{
+            display: grid;
+            place-items: center;
+        }
+
+        .wrap{
+            background-color: antiquewhite;
+            width: 600px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+        }
+
+        .player, .com{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .player{
+            background-color: aquamarine;
+        }
+
+        .com{
+            background-color: bisque;
+        }
+
+        .batu, .gunting, .kertas{
+            width: 25%;
+            height: 30%;
+            background-color: gray;
+            text-align: center;
+            padding-top: 30px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        .optcom{
+            width: 40%;
+            height: 40%;
+            background-color: gray;
+            text-align: center;
+            padding-top: 40px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .info{
+            width: 120px;
+            height: 50px;
+            background-color: aqua;
+            border-radius: 3px;
+            border: 2px solid gray;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            text-align: center;
+            padding-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="info"></div>
+        <div class="com">
+            <div class="optcom"><h1>?</h1></div>
+        </div>
+        <div class="player">
+            <div class="batu"><h2>BATU</h2></div>
+            <div class="gunting"><h2>GUNTING</h2></div>
+            <div class="kertas"><h2>KERTAS</h2></div>
+        </div>
+    </div>
+    
+
+<script src="suitjawa.js"></script>
+</body>
+</html>
