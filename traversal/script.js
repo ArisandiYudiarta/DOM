@@ -18,6 +18,8 @@ const x = document.querySelectorAll('.close');
 //     });
 // }
 
+//Better solution
+
 x.forEach(function(o){
     o.addEventListener('click', function(e){
         e.target.parentElement.style.display='none';
